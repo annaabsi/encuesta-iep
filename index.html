@@ -929,75 +929,6 @@
           </p>
           <div id="aprobacion_castillo"></div>
           <h2 class="font-weight-bold">
-            ¿Cree que Pedro Castillo…?
-          </h2>
-          <div id="durara_o_no" class="row">
-            <div class="col-sm">
-              <div class="durara">
-                <div class="horizontal-bar">
-                  <p>
-                    Durará 5 años
-                  </p>
-                  <dd class="percentage percentage-31">
-                    <span class="text">Noviembre: 31%</span>
-                  </dd>
-                  <dd class="percentage percentage-33">
-                    <span class="text">Diciembre: 33%</span>
-                  </dd>
-                </div>
-              </div>
-              <div class="no_durara">
-                <div class="horizontal-bar">
-                  <p>
-                    No terminará su gobierno
-                  </p>
-                  <dd class="percentage percentage-62">
-                    <span class="text">Noviembre: 62%</span>
-                  </dd>
-                  <dd class="percentage percentage-58">
-                    <span class="text">Diciembre: 58%</span>
-                  </dd>
-                </div>
-              </div>
-            </div>
-            <!--             <div class="col-sm">
-              <h4 class="intertitulado">
-                De quienes no lo aprueban:
-              </h4>
-              <div class="durara">
-                <div class="horizontal-bar">
-                  <p>
-                    Durará 5 años
-                  </p>
-                  <dd class="percentage percentage-31">
-                    <span class="text">Noviembre: 30.95%</span>
-                  </dd>
-                  <dd class="percentage percentage-15">
-                    <span class="text">Diciembre: 15%</span>
-                  </dd>
-                </div>
-              </div>
-              <div class="no_durara">
-                <div class="horizontal-bar">
-                  <p>
-                    No terminará su gobierno
-                  </p>
-                  <dd class="percentage percentage-84">
-                    <span class="text">Noviembre: 84.63%</span>
-                  </dd>
-                  <dd class="percentage percentage-79">
-                    <span class="text">Diciembre: 79%</span>
-                  </dd>
-                </div>
-              </div>
-            </div> -->
-          </div>
-          <p>
-            Hay una ligera disminución en la percepción futura sobre Pedro
-            Castillo como presidente. Al finalizar el año, un 58% cree que no se
-            acabará su gobierno, mientras que un 33% considera que sí llegará.
-          </p>
-          <h2 class="font-weight-bold">
             Desaprobación del Congreso se mantiene alta
           </h2>
           <p>
@@ -1027,53 +958,6 @@
             Congreso, María del Carmen Alva?
           </p>
           <div id="aprobacion_mca"></div>
-          <h2 class="font-weight-bold">
-            ¿Por quién se siente usted más representado?
-          </h2>
-          <p>
-            Si bien el presidente Pedro Castillo mantiene una aprobación de solo
-            28%, un 43% se siente más representado por él que por el accionar
-            del Congreso, que solo llega a un 31%.
-          </p>
-          <div class="row" id="congreso_castillo">
-            <div class="col preferencia">
-              <img
-                class="img-fluid rounded-circle"
-                src="https://cdn.glitch.me/09ad6912-77fe-457b-af64-54b232bf7e67/castillo.png"
-              />
-              <div class="resultados">
-                <div class="number_1">
-                  0
-                </div>
-                <span>%</span>
-              </div>
-            </div>
-            <div class="col preferencia">
-              <img
-                class="img-fluid rounded-circle"
-                src="https://cdn.glitch.me/09ad6912-77fe-457b-af64-54b232bf7e67/congreso.jpg"
-              />
-              <div class="resultados">
-                <div class="number_2">
-                  0
-                </div>
-                <span>%</span>
-              </div>
-            </div>
-          </div>
-          <h2 class="font-weight-bold">
-            ¿Qué tanto afecta el enfrentamiento entre el Presidente y el
-            Congreso…?
-          </h2>
-          <p>
-            La constante tensión y conflicto entre Poder Ejecutivo y Poder
-            Legislativo no es reciente. La bancada fujimorista ha sido
-            generadora de inestabilidad en cada ocasión que perdió una elección
-            presidencial y ello genera una percepción de afectación hacia la
-            ciudadanía. La encuesta IEP de diciembre refleja que para un 70%
-            este enfrentamiento afecta mucho al país.
-          </p>
-          <div id="enfrentamiento_castillo"></div>
           <h2 class="font-weight-bold">
             Aprobación de Pedro Castillo por nivel socioeconómico
           </h2>
@@ -1132,17 +1016,6 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <h2 class="font-weight-bold">
-            En comparación con gobiernos anteriores, ¿el gobierno de Castillo
-            terminará siendo…?
-          </h2>
-          <div id="corrupto_castillo"></div>
-          <p>
-            Si bien la desaprobación del mandatario tiene valores altos, hay un
-            39% de personas que considera que su gestión será menos corrupta que
-            la de los presidentes que lo han precedido. Apenas 2 de cada 10
-            (21%) cree lo contrario.
-          </p>
           <h2 class="font-weight-bold">
             ¿Usted aprueba o desaprueba el desempeño de los ministros?
           </h2>
@@ -1594,7 +1467,7 @@
           axis: {
             x: {
               type: "category",
-              categories: ["Agosto", "Set.", "Octubre", "Nov.", "Dic."]
+              categories: ["Ago-21", "Set-21", "Oct-21", "Nov-21", "Dic-21", "Ene-22"]
             }
           },
           tooltip: {
@@ -1650,7 +1523,7 @@
           axis: {
             x: {
               type: "category",
-              categories: ["Agosto", "Set.", "Octubre", "Nov.", "Dic."]
+              categories: ["Ago-21", "Set-21", "Oct-21", "Nov-21", "Dic-21", "Ene-22"]
             }
           },
           tooltip: {
@@ -1666,9 +1539,9 @@
         var aprobacion_ministros = bb.generate({
           data: {
             columns: [
-              ["data1", 8, 7, 8],
-              ["data2", 43, 25, 25],
-              ["data3", 49, 68, 67]
+              ["data1", 8, 7, 8, 8],
+              ["data2", 43, 25, 25, 23],
+              ["data3", 49, 68, 67, 69]
             ],
             types: {
               data1: "spline", // for ESM specify as: D()
@@ -1693,7 +1566,7 @@
           axis: {
             x: {
               type: "category",
-              categories: ["Octubre", "Nov.", "Dic."]
+              categories: ["Oct-21", "Nov-21", "Dic-21", "Ene-22"]
             }
           },
           tooltip: {
@@ -1744,7 +1617,7 @@
           axis: {
             x: {
               type: "category",
-              categories: ["Agosto", "Set.", "Octubre", "Nov.", "Dic."]
+              categories: ["Ago-21", "Set-21", "Oct-21", "Nov-21", "Dic-21", "Ene-22"]
             },
             y: {
               label: "Aprobación (%)",
@@ -1803,7 +1676,7 @@
           axis: {
             x: {
               type: "category",
-              categories: ["Agosto", "Set.", "Octubre", "Nov.", "Dic."]
+              categories: ["Ago-21", "Set-21", "Oct-21", "Nov-21", "Dic-21", "Ene-22"]
             },
             y: {
               label: "Aprobación (%)",
