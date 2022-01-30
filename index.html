@@ -888,7 +888,7 @@
           la
           educación disminuyeron respecto a la última medición de IEP. La percepción de las acciones que toma Pedro
           Castillo
-          y su equipo sobre ciertos temas caen en 10 puntos porcentuales a más.
+          y su equipo sobre ciertos temas caen en 9 puntos porcentuales a más.
         </p>
         <p class="question">
           ¿Cómo evalúa usted la forma como PEDRO CASTILLO Y SU EQUIPO DE GOBIERNO vienen manejando…? – % Muy bien/ bien
@@ -1514,7 +1514,7 @@
         tooltip: {
           format: {
             value: function (value, ratio, id) {
-              return d3.format(",")(Math.round(value)) + "%";
+              return d3.format(",")(value.toFixed(1)) + "%";
             }
           }
         },
@@ -1727,7 +1727,7 @@
         tooltip: {
           format: {
             value: function (value, ratio, id) {
-              return d3.format(",")(Math.round(value)) + "%";
+              return d3.format(",")(value.toFixed(1)) + "%";
             }
           }
         },
