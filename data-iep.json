@@ -1,16 +1,16 @@
 {
   "castillo_aprueba": [
-    { "p01": "Aprueba", "periodo": "AGOSTO 2021", "PERCENTAGE": 37.5390632711 },
+    { "p01": "Aprueba", "periodo": "AGOSTO 2021", "PERCENTAGE": 38 },
     {
       "p01": "Aprueba",
       "periodo": "SETIEMBRE 2021",
-      "PERCENTAGE": 40.1488114908
+      "PERCENTAGE": 40
     },
-    { "p01": "Aprueba", "periodo": "OCTUBRE 2021", "PERCENTAGE": 35.375744589 },
+    { "p01": "Aprueba", "periodo": "OCTUBRE 2021", "PERCENTAGE": 35 },
     {
       "p01": "Aprueba",
       "periodo": "NOVIEMBRE 2021",
-      "PERCENTAGE": 24.6964759322
+      "PERCENTAGE": 25
     },
     {
       "p01": "Aprueba",
@@ -27,22 +27,22 @@
     {
       "p01": "Desaprueba",
       "periodo": "AGOSTO 2021",
-      "PERCENTAGE": 45.4582750823
+      "PERCENTAGE": 46
     },
     {
       "p01": "Desaprueba",
       "periodo": "SETIEMBRE 2021",
-      "PERCENTAGE": 42.0414712439
+      "PERCENTAGE": 42
     },
     {
       "p01": "Desaprueba",
       "periodo": "OCTUBRE 2021",
-      "PERCENTAGE": 47.922161015
+      "PERCENTAGE": 48
     },
     {
       "p01": "Desaprueba",
       "periodo": "NOVIEMBRE 2021",
-      "PERCENTAGE": 65.3282774227
+      "PERCENTAGE": 65
     },
     {
       "p01": "Desaprueba",
@@ -52,19 +52,19 @@
     {
       "p01": "Desaprueba",
       "periodo": "ENERO 2022",
-      "PERCENTAGE": 61.4
+      "PERCENTAGE": 61.5
     }
   ],
   "castillo_nsnp": [
-    { "p01": "NS/NP", "periodo": "AGOSTO 2021", "PERCENTAGE": 17.0026616467 },
+    { "p01": "NS/NP", "periodo": "AGOSTO 2021", "PERCENTAGE": 16 },
     {
       "p01": "NS/NP",
       "periodo": "SETIEMBRE 2021",
-      "PERCENTAGE": 17.8097172653
+      "PERCENTAGE": 18
     },
 
-    { "p01": "NS/NP", "periodo": "OCTUBRE 2021", "PERCENTAGE": 16.7020943961 },
-    { "p01": "NS/NP", "periodo": "NOVIEMBRE 2021", "PERCENTAGE": 9.9752466451 },
+    { "p01": "NS/NP", "periodo": "OCTUBRE 2021", "PERCENTAGE": 17 },
+    { "p01": "NS/NP", "periodo": "NOVIEMBRE 2021", "PERCENTAGE": 10 },
     { "p01": "NS/NP", "periodo": "DICIEMBRE 2021", "PERCENTAGE": 12 },
     { "p01": "NS/NP", "periodo": "ENERO 2022", "PERCENTAGE": 9.7 }
   ],
