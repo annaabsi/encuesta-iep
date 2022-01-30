@@ -1570,7 +1570,7 @@
         tooltip: {
           format: {
             value: function (value, ratio, id) {
-              return d3.format(",")(value.toFixed(1)) + "%";
+              return d3.format(",")(Math.round(value)) + "%";
             }
           }
         },
@@ -1727,7 +1727,7 @@
         tooltip: {
           format: {
             value: function (value, ratio, id) {
-              return d3.format(",")(Math.round(value)) + "%";
+              return d3.format(",")(value.toFixed(1)) + "%";
             }
           }
         },
