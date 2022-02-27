@@ -20,7 +20,12 @@
     {
       "p01": "Aprueba",
       "periodo": "ENERO 2022",
-      "PERCENTAGE": 28.9
+      "PERCENTAGE": 29
+    },
+    {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 28
     }
   ],
   "castillo_desaprueba": [
@@ -52,7 +57,12 @@
     {
       "p01": "Desaprueba",
       "periodo": "ENERO 2022",
-      "PERCENTAGE": 61.5
+      "PERCENTAGE": 62
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 63
     }
   ],
   "castillo_nsnp": [
@@ -66,7 +76,9 @@
     { "p01": "NS/NP", "periodo": "OCTUBRE 2021", "PERCENTAGE": 17 },
     { "p01": "NS/NP", "periodo": "NOVIEMBRE 2021", "PERCENTAGE": 10 },
     { "p01": "NS/NP", "periodo": "DICIEMBRE 2021", "PERCENTAGE": 12 },
-    { "p01": "NS/NP", "periodo": "ENERO 2022", "PERCENTAGE": 9.7 }
+    { "p01": "NS/NP", "periodo": "ENERO 2022", "PERCENTAGE": 9 },
+    { "p01": "NS/NP", "periodo": "ENERO 2022", "PERCENTAGE": 9 }
+
   ],
   "congreso_nsnp": [
     { "p05_3": "NS/NP", "periodo": "AGOSTO 2021", "PERCENTAGE": 8.0546243255 },
@@ -90,6 +102,11 @@
       "p05_3": "NS/NP",
       "periodo": "ENERO 2022",
       "PERCENTAGE": 3
+    },
+    {
+      "p05_3": "NS/NP",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 4
     }
   ],
   "congreso_aprueba": [
@@ -122,6 +139,11 @@
       "p05_3": "Aprueba",
       "periodo": "ENERO 2022",
       "PERCENTAGE": 20
+    },
+    {
+      "p05_3": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 14
     }
   ],
   "congreso_desaprueba": [
@@ -154,6 +176,11 @@
       "p05_3": "Desaprueba",
       "periodo": "ENERO 2022",
       "PERCENTAGE": 77
+    },
+    {
+      "p05_3": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 82
     }
   ],
   "nse_a": [
@@ -228,6 +255,18 @@
       "periodo": "ENERO 2022",
       "NSEv1": "NSE A",
       "PERCENTAGE": 73.3
+    },
+    {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "NSEv1": "NSE A",
+      "PERCENTAGE": 18
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "NSEv1": "NSE A",
+      "PERCENTAGE": 79
     }
   ],
   "nse_c": [
@@ -302,6 +341,18 @@
       "periodo": "ENERO 2022",
       "NSEv1": "NSE C",
       "PERCENTAGE": 64.9
+    },
+    {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "NSEv1": "NSE C",
+      "PERCENTAGE": 28
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "NSEv1": "NSE C",
+      "PERCENTAGE": 65
     }
   ],
   "nse_d": [
@@ -377,6 +428,18 @@
       "periodo": "ENERO 2022",
       "NSEv1": "NSE D",
       "PERCENTAGE": 53.9
+    },
+    {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "NSEv1": "NSE D",
+      "PERCENTAGE": 33
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "NSEv1": "NSE D",
+      "PERCENTAGE": 55
     }
   ],
   "ambito_lima": [
@@ -417,6 +480,12 @@
       "PERCENTAGE": 18.2
     },
     {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "ambito": "Lima Metropolitana",
+      "PERCENTAGE": 17
+    },
+    {
       "p01": "Desaprueba",
       "periodo": "AGOSTO 2021",
       "ambito": "Lima Metropolitana",
@@ -451,6 +520,12 @@
       "periodo": "ENERO 2022",
       "ambito": "Lima Metropolitana",
       "PERCENTAGE": 74.7
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "ambito": "Lima Metropolitana",
+      "PERCENTAGE": 77
     }
   ],
   "ambito_rural": [
@@ -491,6 +566,12 @@
       "PERCENTAGE": 39
     },
     {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "ambito": "Peru rural",
+      "PERCENTAGE": 40
+    },
+    {
       "p01": "Desaprueba",
       "periodo": "AGOSTO 2021",
       "ambito": "Peru rural",
@@ -525,6 +606,12 @@
       "periodo": "ENERO 2022",
       "ambito": "Peru rural",
       "PERCENTAGE": 52
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "ambito": "Peru rural",
+      "PERCENTAGE": 47
     }
   ],
   "ambito_urbano": [
@@ -565,6 +652,12 @@
       "PERCENTAGE": 32.3
     },
     {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "ambito": "Peru urbano",
+      "PERCENTAGE": 32
+    },
+    {
       "p01": "Desaprueba",
       "periodo": "AGOSTO 2021",
       "ambito": "Peru urbano",
@@ -599,6 +692,12 @@
       "periodo": "ENERO 2022",
       "ambito": "Peru urbano",
       "PERCENTAGE": 55.7
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "ambito": "Peru urbano",
+      "PERCENTAGE": 60
     }
   ],
   "aprobacion_ideologia_agosto": [
@@ -666,6 +765,11 @@
       "p01": "Aprueba",
       "periodo": "ENERO 2022",
       "PERCENTAGE": 26
+    },
+    {
+      "p01": "Aprueba",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 20
     }
   ],
   "mca_desaprueba": [
@@ -698,6 +802,11 @@
       "p01": "Desaprueba",
       "periodo": "ENERO 2022",
       "PERCENTAGE": 65
+    },
+    {
+      "p01": "Desaprueba",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 73
     }
   ],
   "mca_nsnp": [
@@ -730,6 +839,11 @@
       "p01": "NS/NP",
       "periodo": "ENERO 2022",
       "PERCENTAGE": 9
+    },
+    {
+      "p01": "NS/NP",
+      "periodo": "FEBRERO 2022",
+      "PERCENTAGE": 7
     }
   ]
 }
