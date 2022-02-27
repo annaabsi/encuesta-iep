@@ -1585,49 +1585,6 @@
         bindto: "#aprobacion_congreso",
       });
 
-      var aprobacion_ministros = bb.generate({
-        data: {
-          columns: [
-            ["data1", 8, 7, 8, 8],
-            ["data2", 43, 25, 25, 23],
-            ["data3", 49, 68, 67, 69],
-          ],
-          types: {
-            data1: "spline", // for ESM specify as: D()
-            data2: "spline",
-            data3: "spline",
-          },
-          names: {
-            data1: "No contesta",
-            data2: "Aprueba",
-            data3: "Desaprueba",
-          },
-          colors: {
-            data1: "#c6c6c6",
-            data2: "#5d8f53",
-            data3: "#de425b",
-          },
-          labels: false,
-          // labels :{
-          //   colors: "#FFF"
-          // }
-        },
-        axis: {
-          x: {
-            type: "category",
-            categories: ["Oct-21", "Nov-21", "Dic-21", "Ene-22", "Feb-22"],
-          },
-        },
-        tooltip: {
-          format: {
-            value: function (value, ratio, id) {
-              return d3.format(",")(Math.round(value)) + "%";
-            },
-          },
-        },
-        bindto: "#aprobacion_ministros",
-      });
-
       var nse_aprobacion = bb.generate({
         data: {
           columns: [
