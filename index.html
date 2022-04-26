@@ -1256,9 +1256,90 @@
           var mca_aprueba = data["mca_aprueba"];
           var mca_desaprueba = data["mca_desaprueba"];
           var mca_nsnp = data["mca_nsnp"];
-        });
 
-        const aprobacion_congreso = bb.generate({
+          function filter_datita(data, filteredValue) {
+              //console.log(data, filteredValue);
+              if (
+                  data == castillo_nsnp ||
+                  data == castillo_aprueba ||
+                  data == castillo_desaprueba
+              ) {
+                  return _.filter(
+                      data,
+                      (e) => e["p01"].toLowerCase() === filteredValue
+                  );
+              }
+
+              if (
+                  data == congreso_nsnp ||
+                  data == congreso_aprueba ||
+                  data == congreso_desaprueba
+              ) {
+                  return _.filter(
+                      data,
+                      (e) => e["p05_3"].toLowerCase() === filteredValue
+                  );
+              }
+
+              if (
+                  data == nse_a ||
+                  data == nse_b ||
+                  data == nse_c ||
+                  data == nse_d ||
+                  data == nse_e
+              ) {
+                  return _.filter(
+                      data,
+                      (e) => e["p01"].toLowerCase() === filteredValue
+                  );
+              }
+
+              if (
+                  data == ambito_lima ||
+                  data == ambito_rural ||
+                  data == ambito_urbano
+              ) {
+                  return _.filter(
+                      data,
+                      (e) => e["p01"].toLowerCase() === filteredValue
+                  );
+              }
+
+              // if (
+              //   data == aprobacion_ideologia_agosto ||
+              //   data == aprobacion_ideologia_setiembre ||
+              //   data == aprobacion_ideologia_octubre
+              // ) {
+              //   return _.filter(
+              //     data,
+              //     e => e["periodo"].toLowerCase() === filteredValue
+              //   );
+              // }
+
+              if (
+                  data == mca_aprueba ||
+                  data == mca_desaprueba ||
+                  data == mca_nsnp
+              ) {
+                  return _.filter(
+                      data,
+                      (e) => e["p01"].toLowerCase() === filteredValue
+                  );
+              }
+
+              if (
+                  data == anibal_aprueba ||
+                  data == anibal_desaprueba ||
+                  data == anibal_nsnp
+              ) {
+                  return _.filter(
+                      data,
+                      (e) => e["p01"].toLowerCase() === filteredValue
+                  );
+              }
+          }
+
+          const aprobacion_congreso = bb.generate({
             data: {
                 columns: [
                     [
@@ -1402,6 +1483,8 @@
                 },
             },
             bindto: "#aprobacion_mca",
+        });
+
         });
     </script>
 </body>
