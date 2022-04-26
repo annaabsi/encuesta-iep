@@ -249,31 +249,28 @@
         </div>
         <div class="row">
             <div class="col">
-                <h2 class="font-weight-bold">Alta desaprobación del Congreso</h2>
+                <h2 class="font-weight-bold">Accionar del Congreso es rechazado en mayoría</h2>
                 <p>
-                  La valoración del Parlamento se mantiene con altos niveles de
-                  desaprobación, a pesar de que entre febrero y marzo de 2022 la
-                  percepción desfavorable retrocedió en un 3%. Así, un 79% rechaza su
-                  desempeño, mientras que tan solo un 17% aprueba su accionar.
+                    La desaprobación del Legislativo llega a su pico más alto. De acuerdo con la encuesta IEP, el 86% no
+                    está de acuerdo con su accionar. Una evaluación que disminuye seis puntos entre marzo y abril del
+                    2022 al pasar de 79% a 86%. Por su parte, su aprobación cae aún más: solo 1 de cada 10 peruanos y
+                    peruanas está de acuerdo con su labor.
                 </p>
                 <p class="question">
-                  ¿Usted aprueba o desaprueba el desempeño del Congreso de la
-                  República?
+                    ¿Usted aprueba o desaprueba el desempeño del Congreso de la
+                    República?
                 </p>
                 <div id="aprobacion_congreso"></div>
                 <h2 class="font-weight-bold">
-                  Presidenta del Congreso mantiene sus niveles de desaprobación
+                    Desaprobación de la presidenta del Congreso
                 </h2>
                 <p>
-                  La gestión de María del Carmen Alva, presidenta del Congreso, sigue
-                  siendo rechazada (69%) por la ciudadanía. Del otro lado, solo un 24%
-                  respalda el desempeño de la parlamentaria de Acción Popular, un 4%
-                  de valoración más que en la encuesta IEP de febrero 2022, en la que
-                  se situaba con un 20%.
+                    De igual manera, la desaprobación de María del Carmen Alva, presidenta del Legislativo, alcanza su
+                    máxima evaluación: un 76% desaprueba su desempeño. A su vez, su aprobación cae en 6% y logra un 18%.
                 </p>
                 <p class="question">
-                  ¿Usted aprueba o desaprueba el desempeño de la presidenta del
-                  Congreso, María del Carmen Alva?
+                    ¿Usted aprueba o desaprueba el desempeño de la presidenta del
+                    Congreso, María del Carmen Alva?
                 </p>
                 <div id="aprobacion_mca"></div>
             </div>
@@ -342,18 +339,21 @@
             </div>
             <h2 class="font-weight-bold">Aprobación de Castillo por macrozonas</h2>
             <div class="row">
-              <div class="col-12">
-                <p>
-                  Una significativa variación positiva logra el presidente en el Norte (28%), Centro (33%) y Sur (39%) del país. Así, aumenta 5, 6 y 5 puntos porcentuales en estas zonas, respectivamente, en comparación a la medición de marzo. En tanto, en el Oriente (13%) y Lima Metropolitana (26%) disminuye en 3 y 4 por ciento.
-                </p>
-                <label id="week_a_week"></label>
-                <input id="slider" type="range" min="1" max="9" step="1" value="9" />
-                <p class="question">
-                  ¿Usted aprueba o desaprueba la forma como Pedro Castillo está
-                  conduciendo su gobierno?
-                </p>
-              </div>
-              <div id="map"></div>
+                <div class="col-12">
+                    <p>
+                        Una significativa variación positiva logra el presidente en el Norte (28%), Centro (33%) y Sur
+                        (39%) del país. Así, aumenta 5, 6 y 5 puntos porcentuales en estas zonas, respectivamente, en
+                        comparación a la medición de marzo. En tanto, en el Oriente (13%) y Lima Metropolitana (26%)
+                        disminuye en 3 y 4 por ciento.
+                    </p>
+                    <label id="week_a_week"></label>
+                    <input id="slider" type="range" min="1" max="9" step="1" value="9" />
+                    <p class="question">
+                        ¿Usted aprueba o desaprueba la forma como Pedro Castillo está
+                        conduciendo su gobierno?
+                    </p>
+                </div>
+                <div id="map"></div>
             </div>
         </div>
         <div class="row">
@@ -1014,241 +1014,241 @@
         });
     </script>
     <script>
-      mapboxgl.accessToken =
+        mapboxgl.accessToken =
             "pk.eyJ1IjoiZ2VueWxlb25nIiwiYSI6ImNqeTdrMWQweDAwYWUzZXM2ZHUxN3lxcWMifQ.taFCKYjv4VSHhWN86P8N1Q";
 
-      var map = new mapboxgl.Map({
-          container: "map",
-          center: [-75.178, -9.184],
-          minZoom: 3,
-          zoom: 3.8,
-          style: "mapbox://styles/mapbox/light-v10",
-      });
+        var map = new mapboxgl.Map({
+            container: "map",
+            center: [-75.178, -9.184],
+            minZoom: 3,
+            zoom: 3.8,
+            style: "mapbox://styles/mapbox/light-v10",
+        });
 
-      var array = [];
-      //var n = 0
-      function getColor(n) {
-          var inputEl = document.getElementById("slider");
+        var array = [];
+        //var n = 0
+        function getColor(n) {
+            var inputEl = document.getElementById("slider");
 
-          inputEl.onchange = function(event) {
-              //console.log(event.isTrusted);
-              array = [];
-          };
+            inputEl.onchange = function (event) {
+                //console.log(event.isTrusted);
+                array = [];
+            };
 
-          array.push(n);
-          array = _.uniq(array, true);
+            array.push(n);
+            array = _.uniq(array, true);
 
-          array = array.sort(function(a, b) {
-              return a - b;
-          });
+            array = array.sort(function (a, b) {
+                return a - b;
+            });
 
-          // console.log(array);
-          //var element = 0
-          //array.forEach;
-          for (let i = 0; i < array.length && array.length > 3; i++) {
-              // console.log(array[i]);
+            // console.log(array);
+            //var element = 0
+            //array.forEach;
+            for (let i = 0; i < array.length && array.length > 3; i++) {
+                // console.log(array[i]);
 
-              if (array.length == 4) {
-                  return n >= array[3] ?
-                      "#800026" :
-                      n >= array[2] ?
-                      "#bd0026" :
-                      n >= array[1] ?
-                      "#e31a1c" :
-                      n >= array[0] ?
-                      "#fc4e2a" :
-                      n >= 0 ?
-                      "#fd8d3c" :
-                      "#ffffcc";
-              }
+                if (array.length == 4) {
+                    return n >= array[3] ?
+                        "#800026" :
+                        n >= array[2] ?
+                            "#bd0026" :
+                            n >= array[1] ?
+                                "#e31a1c" :
+                                n >= array[0] ?
+                                    "#fc4e2a" :
+                                    n >= 0 ?
+                                        "#fd8d3c" :
+                                        "#ffffcc";
+                }
 
-              if (array.length == 5) {
-                  return n >= array[4] ?
-                      "#800026" :
-                      n >= array[3] ?
-                      "#bd0026" :
-                      n >= array[2] ?
-                      "#e31a1c" :
-                      n >= array[1] ?
-                      "#fc4e2a" :
-                      n >= array[0] ?
-                      "#fd8d3c" :
-                      "#ffffcc";
-              }
-          }
-      }
+                if (array.length == 5) {
+                    return n >= array[4] ?
+                        "#800026" :
+                        n >= array[3] ?
+                            "#bd0026" :
+                            n >= array[2] ?
+                                "#e31a1c" :
+                                n >= array[1] ?
+                                    "#fc4e2a" :
+                                    n >= array[0] ?
+                                        "#fd8d3c" :
+                                        "#ffffcc";
+                }
+            }
+        }
 
-      function filterBy(data, covid_filter, week) {
-          array = [];
-          features = data.features.map((d, b) => {
-              var popup = new mapboxgl.Popup();
-              var layerID = d.properties.MACRO_ZONA;
+        function filterBy(data, covid_filter, week) {
+            array = [];
+            features = data.features.map((d, b) => {
+                var popup = new mapboxgl.Popup();
+                var layerID = d.properties.MACRO_ZONA;
 
-              //console.log(layerID);
+                //console.log(layerID);
 
-              // if (week == "8") {
-              //console.log(week, casos);
+                // if (week == "8") {
+                //console.log(week, casos);
 
-              provincia = _.chain(casos[week].users)
-                  .keyBy("zona")
-                  .mapValues("aprobacion")
-                  .value();
+                provincia = _.chain(casos[week].users)
+                    .keyBy("zona")
+                    .mapValues("aprobacion")
+                    .value();
 
-              document.getElementById("week_a_week").textContent =
-                  casos[week]["periodo"];
+                document.getElementById("week_a_week").textContent =
+                    casos[week]["periodo"];
 
-              //console.log(provincia, layerID);
+                //console.log(provincia, layerID);
 
-              if (provincia[layerID] !== "") {
-                  //array = []
+                if (provincia[layerID] !== "") {
+                    //array = []
 
-                  //console.log(array, provincia[layerID]);
+                    //console.log(array, provincia[layerID]);
 
-                  map.setPaintProperty(
-                      layerID,
-                      "fill-color",
-                      getColor(provincia[layerID])
-                  );
+                    map.setPaintProperty(
+                        layerID,
+                        "fill-color",
+                        getColor(provincia[layerID])
+                    );
 
-                  function _isContains(json, value) {
-                      let contains = false;
-                      Object.keys(json).some((key) => {
-                          contains =
-                              typeof json[key] === "object" ?
-                              _isContains(json[key], value) :
-                              json[key] === value;
-                          return contains;
-                      });
-                      return contains;
-                  }
+                    function _isContains(json, value) {
+                        let contains = false;
+                        Object.keys(json).some((key) => {
+                            contains =
+                                typeof json[key] === "object" ?
+                                    _isContains(json[key], value) :
+                                    json[key] === value;
+                            return contains;
+                        });
+                        return contains;
+                    }
 
-                  map.on("click", layerID, function(e) {
-                      total_provincia = casos[week].users;
+                    map.on("click", layerID, function (e) {
+                        total_provincia = casos[week].users;
 
-                      for (prov in total_provincia) {
-                          //console.log(total_provincia)
-                          getProv = e.features[0].properties.MACRO_ZONA;
-                          // getDep = e.features[0].properties.MACRO_ZONA;
+                        for (prov in total_provincia) {
+                            //console.log(total_provincia)
+                            getProv = e.features[0].properties.MACRO_ZONA;
+                            // getDep = e.features[0].properties.MACRO_ZONA;
 
-                          getProvName = total_provincia[prov]["zona"];
+                            getProvName = total_provincia[prov]["zona"];
 
-                          checkValue = _isContains(total_provincia, getProv);
-                          //console.log(getProvName, getProv, prov);
-                          if (getProv == getProvName && checkValue == true) {
-                              casos_aprobacion = total_provincia[prov]["aprobacion"];
+                            checkValue = _isContains(total_provincia, getProv);
+                            //console.log(getProvName, getProv, prov);
+                            if (getProv == getProvName && checkValue == true) {
+                                casos_aprobacion = total_provincia[prov]["aprobacion"];
 
-                              casos_desaprobacion = total_provincia[prov]["desaprobacion"];
-                              // casos_mujeres = total_provincia[prov]["FEMENINO"];
-                              // casos_hombres = total_provincia[prov]["MASCULINO"];
-                          }
-                      }
+                                casos_desaprobacion = total_provincia[prov]["desaprobacion"];
+                                // casos_mujeres = total_provincia[prov]["FEMENINO"];
+                                // casos_hombres = total_provincia[prov]["MASCULINO"];
+                            }
+                        }
 
-                      var x, i;
-                      x = document.querySelectorAll(".mapboxgl-popup");
-                      for (i = 0; i < x.length; i++) {
-                          x[i].remove();
-                      }
-                      //$(".mapboxgl-popup").remove();
-                      popup
-                          .setLngLat(e.lngLat)
-                          .setHTML(
-                              "<p class='macro_zona'>Macrozona: " +
-                              getProv +
-                              "</p><p class='provincia'>" +
-                              d3.format(",")(Math.round(casos_aprobacion)) +
-                              " % de aprobación.</p><p class='provincia'>" +
-                              d3.format(",")(Math.round(casos_desaprobacion)) +
-                              "% de desaprobación. </p>"
-                          )
-                          .addTo(map);
-                  });
-              }
+                        var x, i;
+                        x = document.querySelectorAll(".mapboxgl-popup");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].remove();
+                        }
+                        //$(".mapboxgl-popup").remove();
+                        popup
+                            .setLngLat(e.lngLat)
+                            .setHTML(
+                                "<p class='macro_zona'>Macrozona: " +
+                                getProv +
+                                "</p><p class='provincia'>" +
+                                d3.format(",")(Math.round(casos_aprobacion)) +
+                                " % de aprobación.</p><p class='provincia'>" +
+                                d3.format(",")(Math.round(casos_desaprobacion)) +
+                                "% de desaprobación. </p>"
+                            )
+                            .addTo(map);
+                    });
+                }
 
-              map.on("mouseenter", layerID, function() {
-                  map.getCanvas().style.cursor = "pointer";
-              });
+                map.on("mouseenter", layerID, function () {
+                    map.getCanvas().style.cursor = "pointer";
+                });
 
-              // Change it back to a pointer when it leaves.
-              map.on("mouseleave", layerID, function() {
-                  map.getCanvas().style.cursor = "";
-              });
+                // Change it back to a pointer when it leaves.
+                map.on("mouseleave", layerID, function () {
+                    map.getCanvas().style.cursor = "";
+                });
 
-              map.setFilter(layerID, ["==", ["get", "MACRO_ZONA"], layerID]);
-          });
-      }
+                map.setFilter(layerID, ["==", ["get", "MACRO_ZONA"], layerID]);
+            });
+        }
 
-      map.on("load", async function() {
-          //var result = [];
-          var files = [" geojson.json", "aprob_zonas.json"];
+        map.on("load", async function () {
+            //var result = [];
+            var files = [" geojson.json", "aprob_zonas.json"];
 
-          const data = await d3.json(files[0]);
-          const data_covid = await d3.json(files[1]);
-          const covid_filter = data_covid["data"];
-          var array = [];
+            const data = await d3.json(files[0]);
+            const data_covid = await d3.json(files[1]);
+            const covid_filter = data_covid["data"];
+            var array = [];
 
-          map["dragPan"].disable();
+            map["dragPan"].disable();
 
-          map.addSource("data", {
-              type: "geojson",
-              data: data,
-          });
+            map.addSource("data", {
+                type: "geojson",
+                data: data,
+            });
 
-          data.features.forEach(function(d, b) {
-              var layerID = d.properties.MACRO_ZONA;
+            data.features.forEach(function (d, b) {
+                var layerID = d.properties.MACRO_ZONA;
 
-              //console.log(layerID) zona
-              casos = _.chain(covid_filter)
-                  .groupBy("periodo")
-                  .toPairs()
-                  .map(function(currentData) {
-                      return _.zipObject(["periodo", "users"], currentData);
-                  })
-                  .value();
+                //console.log(layerID) zona
+                casos = _.chain(covid_filter)
+                    .groupBy("periodo")
+                    .toPairs()
+                    .map(function (currentData) {
+                        return _.zipObject(["periodo", "users"], currentData);
+                    })
+                    .value();
 
-              // console.log(casos);
+                // console.log(casos);
 
-              provincia = _.chain(casos[7].users)
-                  .keyBy("zona")
-                  .mapValues("aprobacion")
-                  .value();
+                provincia = _.chain(casos[7].users)
+                    .keyBy("zona")
+                    .mapValues("aprobacion")
+                    .value();
 
-              // console.log(provincia);
+                // console.log(provincia);
 
-              if (!map.getLayer(layerID) && provincia[layerID] !== "") {
-                  //array = []
-                  //             array.push(provincia[layerID]);
-                  //           array = _.uniq(array, true);
+                if (!map.getLayer(layerID) && provincia[layerID] !== "") {
+                    //array = []
+                    //             array.push(provincia[layerID]);
+                    //           array = _.uniq(array, true);
 
-                  //           array = array.sort(function(a, b){return a-b});
+                    //           array = array.sort(function(a, b){return a-b});
 
-                  //console.log(array);
+                    //console.log(array);
 
-                  map.addLayer({
-                      id: layerID,
-                      type: "fill",
-                      source: "data",
-                      layout: {},
-                      paint: {
-                          "fill-color": getColor(provincia[layerID]),
-                          "fill-opacity": 0.6,
-                      },
-                  });
-              }
-          });
+                    map.addLayer({
+                        id: layerID,
+                        type: "fill",
+                        source: "data",
+                        layout: {},
+                        paint: {
+                            "fill-color": getColor(provincia[layerID]),
+                            "fill-opacity": 0.6,
+                        },
+                    });
+                }
+            });
 
-          filterBy(data, covid_filter, 8);
+            filterBy(data, covid_filter, 8);
 
-          document
-              .getElementById("slider")
-              .addEventListener("input", function(e) {
-                  var week = parseInt(e.target.value - 1);
-                  console.log(e.target.value);
-                  filterBy(data, covid_filter, week);
-              });
-      });   
+            document
+                .getElementById("slider")
+                .addEventListener("input", function (e) {
+                    var week = parseInt(e.target.value - 1);
+                    console.log(e.target.value);
+                    filterBy(data, covid_filter, week);
+                });
+        });   
     </script>
-    <!-- <script>
-                $.when($.getJSON("data-iep.json")).then(function(data) {
+    <script>
+        $.when($.getJSON("data-iep.json")).then(function(data) {
           var congreso_nsnp = data["congreso_nsnp"];
           var congreso_aprueba = data["congreso_aprueba"];
           var congreso_desaprueba = data["congreso_desaprueba"];
@@ -1259,151 +1259,151 @@
         });
 
         const aprobacion_congreso = bb.generate({
-                data: {
-                    columns: [
-                        [
-                            "data1",
-                            ...filter_datita(congreso_nsnp, "ns/np").map(
-                                (o) => o.PERCENTAGE
-                            ),
-                        ],
-                        [
-                            "data2",
-                            ...filter_datita(congreso_aprueba, "aprueba").map(
-                                (o) => o.PERCENTAGE
-                            ),
-                        ],
-                        [
-                            "data3",
-                            ...filter_datita(congreso_desaprueba, "desaprueba").map(
-                                (o) => o.PERCENTAGE
-                            ),
-                        ],
+            data: {
+                columns: [
+                    [
+                        "data1",
+                        ...filter_datita(congreso_nsnp, "ns/np").map(
+                            (o) => o.PERCENTAGE
+                        ),
                     ],
-                    types: {
-                        data1: "line", // for ESM specify as: step()
-                        data2: "line",
-                        data3: "line",
-                    },
-                    names: {
-                        data1: "No contesta",
-                        data2: "Aprueba",
-                        data3: "Desaprueba",
-                    },
-                    colors: {
-                        data1: "#ffe48f",
-                        data2: "#adcc76",
-                        data3: "#de425b",
-                    },
-                    labels: false,
-                    // labels :{
-                    //   colors: "#FFF"
-                    // }
+                    [
+                        "data2",
+                        ...filter_datita(congreso_aprueba, "aprueba").map(
+                            (o) => o.PERCENTAGE
+                        ),
+                    ],
+                    [
+                        "data3",
+                        ...filter_datita(congreso_desaprueba, "desaprueba").map(
+                            (o) => o.PERCENTAGE
+                        ),
+                    ],
+                ],
+                types: {
+                    data1: "line", // for ESM specify as: step()
+                    data2: "line",
+                    data3: "line",
                 },
-                axis: {
-                    x: {
-                        type: "category",
-                        categories: [
-                            "Ago 21",
-                            "Set-21",
-                            "Oct-21",
-                            "Nov-21",
-                            "Dic-21",
-                            "Ene-22",
-                            "Feb-22",
-                            "Mar-22",
-                        ],
+                names: {
+                    data1: "No contesta",
+                    data2: "Aprueba",
+                    data3: "Desaprueba",
+                },
+                colors: {
+                    data1: "#ffe48f",
+                    data2: "#adcc76",
+                    data3: "#de425b",
+                },
+                labels: false,
+                // labels :{
+                //   colors: "#FFF"
+                // }
+            },
+            axis: {
+                x: {
+                    type: "category",
+                    categories: [
+                        "Ago 21",
+                        "Set-21",
+                        "Oct-21",
+                        "Nov-21",
+                        "Dic-21",
+                        "Ene-22",
+                        "Feb-22",
+                        "Mar-22",
+                    ],
+                },
+            },
+            tooltip: {
+                format: {
+                    value: function(value, ratio, id) {
+                        return d3.format(",")(Math.round(value)) + "%";
                     },
                 },
-                tooltip: {
-                    format: {
-                        value: function(value, ratio, id) {
-                            return d3.format(",")(Math.round(value)) + "%";
-                        },
-                    },
-                },
-                bindto: "#aprobacion_congreso",
-            });
+            },
+            bindto: "#aprobacion_congreso",
+        });
 
         const aprobacion_mca = bb.generate({
-                data: {
-                    x: "x",
-                    columns: [
-                        [
-                            "x",
-                            "Ago 21",
-                            "Set-21",
-                            "Oct-21",
-                            "Nov-21",
-                            "Dic-21",
-                            "Ene-22",
-                            "Feb-22",
-                            "Mar-22",
-                        ],
-                        [
-                            "data1",
-                            ...filter_datita(mca_nsnp, "ns/np").map((o) => o.PERCENTAGE),
-                        ],
-                        [
-                            "data2",
-                            ...filter_datita(mca_aprueba, "aprueba").map(
-                                (o) => o.PERCENTAGE
-                            ),
-                        ],
-                        [
-                            "data3",
-                            ...filter_datita(mca_desaprueba, "desaprueba").map(
-                                (o) => o.PERCENTAGE
-                            ),
-                        ],
+            data: {
+                x: "x",
+                columns: [
+                    [
+                        "x",
+                        "Ago 21",
+                        "Set-21",
+                        "Oct-21",
+                        "Nov-21",
+                        "Dic-21",
+                        "Ene-22",
+                        "Feb-22",
+                        "Mar-22",
                     ],
-                    types: {
-                        data1: "line", // for ESM specify as: step()
-                        data2: "line",
-                        data3: "line",
-                    },
-                    names: {
-                        data1: "No contesta",
-                        data2: "Aprueba",
-                        data3: "Desaprueba",
-                    },
-                    colors: {
-                        data1: "#ffe48f",
-                        data2: "#adcc76",
-                        data3: "#de425b",
-                    },
-                    labels: false,
-                    // labels :{
-                    //   colors: "#FFF"
-                    // }
+                    [
+                        "data1",
+                        ...filter_datita(mca_nsnp, "ns/np").map((o) => o.PERCENTAGE),
+                    ],
+                    [
+                        "data2",
+                        ...filter_datita(mca_aprueba, "aprueba").map(
+                            (o) => o.PERCENTAGE
+                        ),
+                    ],
+                    [
+                        "data3",
+                        ...filter_datita(mca_desaprueba, "desaprueba").map(
+                            (o) => o.PERCENTAGE
+                        ),
+                    ],
+                ],
+                types: {
+                    data1: "line", // for ESM specify as: step()
+                    data2: "line",
+                    data3: "line",
                 },
-                axis: {
-                    x: {
-                        type: "category",
+                names: {
+                    data1: "No contesta",
+                    data2: "Aprueba",
+                    data3: "Desaprueba",
+                },
+                colors: {
+                    data1: "#ffe48f",
+                    data2: "#adcc76",
+                    data3: "#de425b",
+                },
+                labels: false,
+                // labels :{
+                //   colors: "#FFF"
+                // }
+            },
+            axis: {
+                x: {
+                    type: "category",
+                },
+            },
+            // axis: {
+            //   x: {
+            //     // type: "category",
+            //     categories: [
+            //       "Agosto",
+            //       "Setiembre",
+            //       "Octubre",
+            //       "Noviembre",
+            //       "Diciembre"
+            //     ]
+            //   }
+            // },
+            tooltip: {
+                format: {
+                    value: function(value, ratio, id) {
+                        return d3.format(",")(Math.round(value)) + "%";
                     },
                 },
-                // axis: {
-                //   x: {
-                //     // type: "category",
-                //     categories: [
-                //       "Agosto",
-                //       "Setiembre",
-                //       "Octubre",
-                //       "Noviembre",
-                //       "Diciembre"
-                //     ]
-                //   }
-                // },
-                tooltip: {
-                    format: {
-                        value: function(value, ratio, id) {
-                            return d3.format(",")(Math.round(value)) + "%";
-                        },
-                    },
-                },
-                bindto: "#aprobacion_mca",
-            });
-    </script> -->
+            },
+            bindto: "#aprobacion_mca",
+        });
+    </script>
 </body>
 
 </html>
