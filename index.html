@@ -402,7 +402,7 @@
     <footer style="background-color: #f0f0f0">
         <div class="w-1000">
             <span><strong>Redacción:</strong> Milagros Requena</span>
-            <span><strong>Desarrollo Web:</strong> Alejandro Mayurí</span>
+            <span><strong>Desarrollo Web:</strong> Alejandro Mayurí y Anna Absi</span>
             <br />
             <span>© Grupo La República </span>
             <span>Todos los derechos reservados.</span>
@@ -1012,6 +1012,156 @@
             },
             bindto: "#aprobacion_ambito",
         });
+        const aprobacion_congreso = bb.generate({
+            data: {
+                x: "x",
+                columns: [
+                    [
+                        "x",
+                        "Ago 21",
+                        "Set 21",
+                        "Oct 21",
+                        "Nov 21",
+                        "Dic 21",
+                        "Ene 22",
+                        "Feb 22",
+                        "Mar 22",
+                        "Abr 22",
+                    ],
+                    [
+                        "data1", 8, 7, 4, 4, 4, 3, 4, 4, 3
+                    ],
+                    [
+                        "data2", 31, 32, 21, 21, 18, 20, 14, 17, 11
+                    ],
+                    [
+                        "data3", 61, 61, 75, 75, 78, 77, 82, 79, 86
+                    ],
+                ],
+                types: {
+                    data1: "line", // for ESM specify as: step()
+                    data2: "line",
+                    data3: "line",
+                },
+                names: {
+                    data1: "NS/NP",
+                    data2: "Aprueba",
+                    data3: "Desaprueba",
+                },
+                colors: {
+                    data1: "#ffe48f",
+                    data2: "#adcc76",
+                    data3: "#de425b",
+                },
+                labels: false,
+                // labels :{
+                //   colors: "#FFF"
+                // }
+            },
+            // axis: {
+            //     x: {
+            //         type: "category",
+            //         categories: [
+            //             "Ago 21",
+            //             "Set-21",
+            //             "Oct-21",
+            //             "Nov-21",
+            //             "Dic-21",
+            //             "Ene-22",
+            //             "Feb-22",
+            //             "Mar-22",
+            //         ],
+            //     },
+            // },
+            axis: {
+                x: {
+                    type: "category",
+                },
+            },
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id) {
+                        return d3.format(",")(Math.round(value)) + "%";
+                    },
+                },
+            },
+            bindto: "#aprobacion_congreso",
+        });
+        const aprobacion_mca = bb.generate({
+            data: {
+                x: "x",
+                columns: [
+                    [
+                        "x",
+                        "Ago 21",
+                        "Set 21",
+                        "Oct 21",
+                        "Nov 21",
+                        "Dic 21",
+                        "Ene 22",
+                        "Feb 22",
+                        "Mar 22",
+                        "Abr 22",
+                    ],
+                    [
+                        "data1", 12, 10, 14, 8, 9, 9, 7, 7, 6
+                    ],
+                    [
+                        "data2", 34, 34, 28, 31, 23, 26, 20, 24, 18
+                    ],
+                    [
+                        "data3", 54, 56, 58, 61, 68, 65, 73, 69, 76
+                    ],
+                ],
+                types: {
+                    data1: "line", // for ESM specify as: step()
+                    data2: "line",
+                    data3: "line",
+                },
+                names: {
+                    data1: "NS/NP",
+                    data2: "Aprueba",
+                    data3: "Desaprueba",
+                },
+                colors: {
+                    data1: "#ffe48f",
+                    data2: "#adcc76",
+                    data3: "#de425b",
+                },
+                labels: false,
+                // labels :{
+                //   colors: "#FFF"
+                // }
+            },
+            // axis: {
+            //     x: {
+            //         type: "category",
+            //         categories: [
+            //             "Ago 21",
+            //             "Set-21",
+            //             "Oct-21",
+            //             "Nov-21",
+            //             "Dic-21",
+            //             "Ene-22",
+            //             "Feb-22",
+            //             "Mar-22",
+            //         ],
+            //     },
+            // },
+            axis: {
+                x: {
+                    type: "category",
+                },
+            },
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id) {
+                        return d3.format(",")(Math.round(value)) + "%";
+                    },
+                },
+            },
+            bindto: "#aprobacion_mca",
+        });
     </script>
     <script>
         mapboxgl.accessToken =
@@ -1246,246 +1396,6 @@
                     filterBy(data, covid_filter, week);
                 });
         });   
-    </script>
-    <script>
-        $.when($.getJSON("data-iep.json")).then(function(data) {
-          var congreso_nsnp = data["congreso_nsnp"];
-          var congreso_aprueba = data["congreso_aprueba"];
-          var congreso_desaprueba = data["congreso_desaprueba"];
-
-          var mca_aprueba = data["mca_aprueba"];
-          var mca_desaprueba = data["mca_desaprueba"];
-          var mca_nsnp = data["mca_nsnp"];
-
-          function filter_datita(data, filteredValue) {
-              //console.log(data, filteredValue);
-              if (
-                  data == castillo_nsnp ||
-                  data == castillo_aprueba ||
-                  data == castillo_desaprueba
-              ) {
-                  return _.filter(
-                      data,
-                      (e) => e["p01"].toLowerCase() === filteredValue
-                  );
-              }
-
-              if (
-                  data == congreso_nsnp ||
-                  data == congreso_aprueba ||
-                  data == congreso_desaprueba
-              ) {
-                  return _.filter(
-                      data,
-                      (e) => e["p05_3"].toLowerCase() === filteredValue
-                  );
-              }
-
-              if (
-                  data == nse_a ||
-                  data == nse_b ||
-                  data == nse_c ||
-                  data == nse_d ||
-                  data == nse_e
-              ) {
-                  return _.filter(
-                      data,
-                      (e) => e["p01"].toLowerCase() === filteredValue
-                  );
-              }
-
-              if (
-                  data == ambito_lima ||
-                  data == ambito_rural ||
-                  data == ambito_urbano
-              ) {
-                  return _.filter(
-                      data,
-                      (e) => e["p01"].toLowerCase() === filteredValue
-                  );
-              }
-
-              // if (
-              //   data == aprobacion_ideologia_agosto ||
-              //   data == aprobacion_ideologia_setiembre ||
-              //   data == aprobacion_ideologia_octubre
-              // ) {
-              //   return _.filter(
-              //     data,
-              //     e => e["periodo"].toLowerCase() === filteredValue
-              //   );
-              // }
-
-              if (
-                  data == mca_aprueba ||
-                  data == mca_desaprueba ||
-                  data == mca_nsnp
-              ) {
-                  return _.filter(
-                      data,
-                      (e) => e["p01"].toLowerCase() === filteredValue
-                  );
-              }
-
-              if (
-                  data == anibal_aprueba ||
-                  data == anibal_desaprueba ||
-                  data == anibal_nsnp
-              ) {
-                  return _.filter(
-                      data,
-                      (e) => e["p01"].toLowerCase() === filteredValue
-                  );
-              }
-          }
-
-          const aprobacion_congreso = bb.generate({
-            data: {
-                columns: [
-                    [
-                        "data1",
-                        ...filter_datita(congreso_nsnp, "ns/np").map(
-                            (o) => o.PERCENTAGE
-                        ),
-                    ],
-                    [
-                        "data2",
-                        ...filter_datita(congreso_aprueba, "aprueba").map(
-                            (o) => o.PERCENTAGE
-                        ),
-                    ],
-                    [
-                        "data3",
-                        ...filter_datita(congreso_desaprueba, "desaprueba").map(
-                            (o) => o.PERCENTAGE
-                        ),
-                    ],
-                ],
-                types: {
-                    data1: "line", // for ESM specify as: step()
-                    data2: "line",
-                    data3: "line",
-                },
-                names: {
-                    data1: "No contesta",
-                    data2: "Aprueba",
-                    data3: "Desaprueba",
-                },
-                colors: {
-                    data1: "#ffe48f",
-                    data2: "#adcc76",
-                    data3: "#de425b",
-                },
-                labels: false,
-                // labels :{
-                //   colors: "#FFF"
-                // }
-            },
-            axis: {
-                x: {
-                    type: "category",
-                    categories: [
-                        "Ago 21",
-                        "Set-21",
-                        "Oct-21",
-                        "Nov-21",
-                        "Dic-21",
-                        "Ene-22",
-                        "Feb-22",
-                        "Mar-22",
-                    ],
-                },
-            },
-            tooltip: {
-                format: {
-                    value: function(value, ratio, id) {
-                        return d3.format(",")(Math.round(value)) + "%";
-                    },
-                },
-            },
-            bindto: "#aprobacion_congreso",
-        });
-
-        const aprobacion_mca = bb.generate({
-            data: {
-                x: "x",
-                columns: [
-                    [
-                        "x",
-                        "Ago 21",
-                        "Set-21",
-                        "Oct-21",
-                        "Nov-21",
-                        "Dic-21",
-                        "Ene-22",
-                        "Feb-22",
-                        "Mar-22",
-                    ],
-                    [
-                        "data1",
-                        ...filter_datita(mca_nsnp, "ns/np").map((o) => o.PERCENTAGE),
-                    ],
-                    [
-                        "data2",
-                        ...filter_datita(mca_aprueba, "aprueba").map(
-                            (o) => o.PERCENTAGE
-                        ),
-                    ],
-                    [
-                        "data3",
-                        ...filter_datita(mca_desaprueba, "desaprueba").map(
-                            (o) => o.PERCENTAGE
-                        ),
-                    ],
-                ],
-                types: {
-                    data1: "line", // for ESM specify as: step()
-                    data2: "line",
-                    data3: "line",
-                },
-                names: {
-                    data1: "No contesta",
-                    data2: "Aprueba",
-                    data3: "Desaprueba",
-                },
-                colors: {
-                    data1: "#ffe48f",
-                    data2: "#adcc76",
-                    data3: "#de425b",
-                },
-                labels: false,
-                // labels :{
-                //   colors: "#FFF"
-                // }
-            },
-            axis: {
-                x: {
-                    type: "category",
-                },
-            },
-            // axis: {
-            //   x: {
-            //     // type: "category",
-            //     categories: [
-            //       "Agosto",
-            //       "Setiembre",
-            //       "Octubre",
-            //       "Noviembre",
-            //       "Diciembre"
-            //     ]
-            //   }
-            // },
-            tooltip: {
-                format: {
-                    value: function(value, ratio, id) {
-                        return d3.format(",")(Math.round(value)) + "%";
-                    },
-                },
-            },
-            bindto: "#aprobacion_mca",
-        });
-
-        });
     </script>
 </body>
 
